@@ -41,9 +41,9 @@ const BlogPostList = () => {
         ))
       )}
       <div className="pagination">
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
+        <button className='bg-primary text-white border-0 rounded-1' onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
         <span>Page {currentPage} of {totalPages}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
+        <button className='bg-primary text-white border-0 rounded-1' onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
       </div>
     </div>
   );

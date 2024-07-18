@@ -19,14 +19,14 @@ const BlogPostDetails = ({ posts }) => {
      
 
   return (
-    <div className="">
+    <div className="container py-4">
 
       {post?
-      <div>
-      <h2>{post.title}</h2>
-      <img src={post.urlToImage} alt={post.title} />
-      <p>{post.content}</p>
-      <Link to="/">Back</Link>
+      <div className='w-75 mx-auto'>
+      <h2 className=' fs-3 pb-4'>{post.title}</h2>
+      <img className=' img-fluid' src={post.urlToImage} alt={post.title} />
+      <p className='pt-4'>{post.content}</p>
+      <div className='py-2'><Link className='text-decoration-none text-white bg-primary px-4 py-2 fs-6 rounded-1' to="/">Back</Link></div>
       </div>:<p>{load?"Loading...":"OOPS Content Removed !!! 😢"}</p>}
     </div>
   );
